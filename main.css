@@ -4,16 +4,39 @@ Paste the code below into your HTML document.
 
 1. The header element should have a 1px border. Color, you pick.
 */
+body {
+	display: flex-wrap;
+}
+
 header {
 	border: 1px solid blue;
 }
 /*2. Convert the ul in the navigation element into a series of horizontal links with # as
 	 the href value, without bullets, and have some space between them horizontally.*/
+/*3. Ensure that the navigation is semantically marked as such (i.e. wrap it in the correct 
+HTML tag).*/
+
+header {
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-around;
+	padding-top: 10px;
+	padding-bottom: 10px;	
+	text-decoration: none; /*does not work*/
+}
+/*4. Any text in an element with class "disabled" should be colored grey, unless it is inside an
+   anchor tag. If inside an anchor, it should be colored purple.*/
+
+.disabled {
+	color: gray;
+}
+
+a.disabled, a .disabled{
+	color: purple;
+}
 
 
-/*3. Ensure that the navigation is semantically marked as such (i.e. wrap it in the correct HTML tag).
-4. Any text in an element with class "disabled" should be colored grey, unless it is inside an anchor tag. If inside an anchor, it should be colored purple.
-5. Any text inside an element with a class of "active" should be colored yellow.
+/*5. Any text inside an element with a class of "active" should be colored yellow.
 6. Section elements should be contained within an article element.
 7. There are two missing closing tags in this document. Make sure you add them back in.
 8. Make the `"I'm red"` text colored red
